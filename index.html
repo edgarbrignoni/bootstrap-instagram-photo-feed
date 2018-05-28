@@ -1,0 +1,371 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oleo+Script">
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <title>Bootstrap Instagram Photo Feed</title>
+</head>
+
+<body>
+    
+    <nav class="navbar fixed-top navbar-light bg-light p-1">
+        
+        <a class="navbar-brand" href="#">
+            <i class="fab fa-instagram"></i>
+            <span>Miniongram</span>
+        </a><!-- navbar brand -->
+        
+        <ul class="nav justify-content-end">
+            <li class="nav-item align-self-center">
+                <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#exampleModal">
+                    Create new post
+                </button>
+            </li><!-- trigger modal button -->
+            <li class="nav-item">
+                <button type="button" class="btn btn-lg btn-link px-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-cog"></i><i class="fas fa-caret-down"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item text-right" href="#">Action</a>
+                    <a class="dropdown-item text-right" href="#">Another Action</a>
+                    <a class="dropdown-item text-right" data-toggle="modal" data-target="#exampleModal">Modal Form</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-right" href="#">Log Out</a>
+                </div>
+            </li><!-- gear button -->
+        </ul><!-- navbar buttons -->
+
+    </nav><!-- navbar fixed -->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1"></label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </button>
+                </div><!-- modal body -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Publish</button>
+                </div><!-- modal footer -->
+            </div><!-- modal body -->
+        </div><!-- modal dialog -->
+    </div><!-- modal container -->
+    
+    <div class="container-fluid">
+        <div class="row mt-2" id="top-row"><br /><br /></div>
+        <div class="row p-2 mb-3" id="nav-pills">
+            <div class="mx-auto">
+                <ul class="nav nav-pills" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true"><i class="fas fa-th"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-square"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div><!-- navpills -->
+        
+        <div class="tab-content">
+            <div id="home" role="tabpanel" aria-labelledby="home-tab" class="tab-pane active col-sm-12 col-md-6 mx-auto">
+                    <div class="row">
+                        <div class="col-8 mt-2">
+                            <h4>Hello Minions</h4>
+                        </div> <!-- heading -->
+                        <div class="col-4 mt-3">
+                            <h6>05/26</h6>
+                        </div> <!-- date -->
+                        <div class="col-12 p-0">
+                            <img src="./img/Hello Minions.jpg"></img>
+                        </div> <!-- image -->
+                        <div class="col-12 pt-2 pb-2"><strong>526 Likes</strong></div>
+                        <div class="col-12">
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        </div> <!-- content -->
+                        <div class="col-1 pr-0">
+                            <i class="far fa-heart"></i>
+                        </div> <!-- heart -->
+                        <div class="col-10 pl-3">
+                            <input class="form-control form-control-sm" type="text" placeholder="Comments..." />
+                        </div> <!-- comments -->
+                        <div class="col-1 pl-0 pr-0">
+                            <button class="btn btn-link pl-1 pr-0 pt-0" data-toggle="modal" data-target="#exampleModal">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                        </div> <!-- link -->
+                        <div class="col-12" id="spacer">
+                            <br/ >
+                        </div> <!--spacer -->
+                    </div><!-- Hello Minions -->
+                    <div class="row">
+                        <div class="col-8 mt-2">
+                            <h4>Party Minions</h4>
+                        </div> <!-- heading -->
+                        <div class="col-4 mt-3">
+                            <h6>05/26</h6>
+                        </div> <!-- date -->
+                        <div class="col-12 p-0">
+                            <img src="./img/Party Minions.jpg"></img>
+                        </div> <!-- image -->
+                        <div class="col-12 pt-2 pb-2"><strong>526 Likes</strong></div>
+                        <div class="col-12">
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        </div> <!-- content -->
+                        <div class="col-1 pr-0">
+                            <i class="far fa-heart"></i>
+                        </div> <!-- heart -->
+                        <div class="col-10 pl-3">
+                            <input class="form-control form-control-sm" type="text" placeholder="Comments..." />
+                        </div> <!-- comments -->
+                        <div class="col-1 pl-0 pr-0">
+                            <button class="btn btn-link pl-1 pr-0 pt-0" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-ellipsis-v"></i></button>
+                        </div> <!-- link -->
+                        <div class="col-12" id="spacer">
+                            <br/ >
+                        </div> <!--spacer -->
+                    </div><!-- Party Minions -->
+                    <div class="row">
+                        <div class="col-8 mt-2">
+                            <h4>Selfie Minions</h4>
+                        </div> <!-- heading -->
+                        <div class="col-4 mt-3">
+                            <h6>05/26</h6>
+                        </div> <!-- date -->
+                        <div class="col-12 p-0">
+                            <img src="./img/Selfie Minions.jpg"></img>
+                        </div> <!-- image -->
+                        <div class="col-12 pt-2 pb-2"><strong>526 Likes</strong></div>
+                        <div class="col-12">
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        </div> <!-- content -->
+                        <div class="col-1 pr-0">
+                            <i class="far fa-heart"></i>
+                        </div> <!-- heart -->
+                        <div class="col-10 pl-3">
+                            <input class="form-control form-control-sm" type="text" placeholder="Comments..." />
+                        </div> <!-- comments -->
+                        <div class="col-1 pl-0 pr-0">
+                            <button class="btn btn-link pl-1 pr-0 pt-0" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-ellipsis-v"></i></button>
+                        </div> <!-- link -->
+                        <div class="col-12" id="spacer">
+                            <br/ >
+                        </div> <!--spacer -->
+                    </div><!-- Selfie Minions -->
+                    <div class="row">
+                        <div class="col-8 mt-2">
+                            <h4>Artzy Minions</h4>
+                        </div> <!-- heading -->
+                        <div class="col-4 mt-3">
+                            <h6>05/26</h6>
+                        </div> <!-- date -->
+                        <div class="col-12 p-0">
+                            <img src="./img/Artzy Minions.jpg"></img>
+                        </div> <!-- image -->
+                        <div class="col-12 pt-2 pb-2"><strong>526 Likes</strong></div>
+                        <div class="col-12">
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        </div> <!-- content -->
+                        <div class="col-1 pr-0">
+                            <i class="far fa-heart"></i>
+                        </div> <!-- heart -->
+                        <div class="col-10 pl-3">
+                            <input class="form-control form-control-sm" type="text" placeholder="Comments..." />
+                        </div> <!-- comments -->
+                        <div class="col-1 pl-0 pr-0">
+                            <button class="btn btn-link pl-1 pr-0 pt-0" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-ellipsis-v"></i></button>
+                        </div> <!-- link -->
+                        <div class="col-12" id="spacer">
+                            <br/ >
+                        </div> <!--spacer -->
+                    </div><!-- Artzy Minions -->
+                    <div class="row">
+                        <div class="col-8 mt-2">
+                            <h4>Streeless Minions</h4>
+                        </div> <!-- heading -->
+                        <div class="col-4 mt-3">
+                            <h6>05/26</h6>
+                        </div> <!-- date -->
+                        <div class="col-12 p-0">
+                            <img src="./img/Streeless Minions.jpg"></img>
+                        </div> <!-- image -->
+                        <div class="col-12 pt-2 pb-2"><strong>526 Likes</strong></div>
+                        <div class="col-12">
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        </div> <!-- content -->
+                        <div class="col-1 pr-0">
+                            <i class="far fa-heart"></i>
+                        </div> <!-- heart -->
+                        <div class="col-10 pl-3">
+                            <input class="form-control form-control-sm" type="text" placeholder="Comments..." />
+                        </div> <!-- comments -->
+                        <div class="col-1 pl-0 pr-0">
+                            <button class="btn btn-link pl-1 pr-0 pt-0" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-ellipsis-v"></i></button>
+                        </div> <!-- link -->
+                        <div class="col-12" id="spacer">
+                            <br/ >
+                        </div> <!--spacer -->
+                    </div><!-- Streeless Minions -->
+                    <div class="row">
+                        <div class="col-8 mt-2">
+                            <h4>Bat Minion</h4>
+                        </div> <!-- heading -->
+                        <div class="col-4 mt-3">
+                            <h6>05/26</h6>
+                        </div> <!-- date -->
+                        <div class="col-12 p-0">
+                            <img src="./img/Bat Minion.jpg"></img>
+                        </div> <!-- image -->
+                        <div class="col-12 pt-2 pb-2"><strong>526 Likes</strong></div>
+                        <div class="col-12">
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        </div> <!-- content -->
+                        <div class="col-1 pr-0">
+                            <i class="far fa-heart"></i>
+                        </div> <!-- heart -->
+                        <div class="col-10 pl-3">
+                            <input class="form-control form-control-sm" type="text" placeholder="Comments..." />
+                        </div> <!-- comments -->
+                        <div class="col-1 pl-0 pr-0">
+                            <button class="btn btn-link pl-1 pr-0 pt-0" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-ellipsis-v"></i></button>
+                        </div> <!-- link -->
+                        <div class="col-12" id="spacer">
+                            <br/ >
+                        </div> <!--spacer -->
+                    </div><!-- Bat Minion -->
+                    <div class="row">
+                        <div class="col-8 mt-2">
+                            <h4>Smart Minion</h4>
+                        </div> <!-- heading -->
+                        <div class="col-4 mt-3">
+                            <h6>05/26</h6>
+                        </div> <!-- date -->
+                        <div class="col-12 p-0">
+                            <img src="./img/Smart Minion.jpg"></img>
+                        </div> <!-- image -->
+                        <div class="col-12 pt-2 pb-2"><strong>526 Likes</strong></div>
+                        <div class="col-12">
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        </div> <!-- content -->
+                        <div class="col-1 pr-0">
+                            <i class="far fa-heart"></i>
+                        </div> <!-- heart -->
+                        <div class="col-10 pl-3">
+                            <input class="form-control form-control-sm" type="text" placeholder="Comments..." />
+                        </div> <!-- comments -->
+                        <div class="col-1 pl-0 pr-0">
+                            <button class="btn btn-link pl-1 pr-0 pt-0" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-ellipsis-v"></i></button>
+                        </div> <!-- link -->
+                        <div class="col-12" id="spacer">
+                            <br/ >
+                        </div> <!--spacer -->
+                    </div><!-- Smart Minion -->
+                    <div class="row">
+                        <div class="col-8 mt-2">
+                            <h4>One in a Minion</h4>
+                        </div> <!-- heading -->
+                        <div class="col-4 mt-3">
+                            <h6>05/26</h6>
+                        </div> <!-- date -->
+                        <div class="col-12 p-0">
+                            <img src="./img/One in a Minion.jpg"></img>
+                        </div> <!-- image -->
+                        <div class="col-12 pt-2 pb-2"><strong>526 Likes</strong></div>
+                        <div class="col-12">
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        </div> <!-- content -->
+                        <div class="col-1 pr-0">
+                            <i class="far fa-heart"></i>
+                        </div> <!-- heart -->
+                        <div class="col-10 pl-3">
+                            <input class="form-control form-control-sm" type="text" placeholder="Comments..." />
+                        </div> <!-- comments -->
+                        <div class="col-1 pl-0 pr-0">
+                            <button class="btn btn-link pl-1 pr-0 pt-0" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-ellipsis-v"></i></button>
+                        </div> <!-- link -->
+                        <div class="col-12" id="spacer">
+                            <br/ >
+                        </div> <!--spacer -->
+                    </div><!-- One in a Minion -->
+                    <div class="row">
+                        <div class="col-8 mt-2">
+                            <h4>The Three Amionons</h4>
+                        </div> <!-- heading -->
+                        <div class="col-4 mt-3">
+                            <h6>05/26</h6>
+                        </div> <!-- date -->
+                        <div class="col-12 p-0">
+                            <img src="./img/The Three Amionons.jpg"></img>
+                        </div> <!-- image -->
+                        <div class="col-12 pt-2 pb-2"><strong>526 Likes</strong></div>
+                        <div class="col-12">
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                        </div> <!-- content -->
+                        <div class="col-1 pr-0">
+                            <i class="far fa-heart"></i>
+                        </div> <!-- heart -->
+                        <div class="col-10 pl-3">
+                            <input class="form-control form-control-sm" type="text" placeholder="Comments..." />
+                        </div> <!-- comments -->
+                        <div class="col-1 pl-0 pr-0">
+                            <button class="btn btn-link pl-1 pr-0 pt-0" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-ellipsis-v"></i></button>
+                        </div> <!-- link -->
+                        <div class="col-12" id="spacer">
+                            <br/ >
+                        </div> <!--spacer -->
+                    </div><!-- The Three Amionons -->
+            </div><!-- one column tab -->
+            
+            <div id="profile" role="tabpanel" aria-labelledby="profile-tab" class="tab-pane col-sm-12 mx-auto p-0" style="background:white;">
+                <div class="row mt-3">
+                    <div class="col-sm-12 col-md-4">
+                        <img src="./img/Hello Minions.jpg" style="width:100%;"></img>
+                    </div><!-- Hello Minions -->
+                    <div class="col-sm-12 col-md-4">
+                        <img src="./img/Party Minions.jpg" style="width:100%;"></img>
+                    </div><!-- Party Minions -->
+                    <div class="col-sm-12 col-md-4">
+                        <img src="./img/Selfie Minions.jpg" style="width:100%;"></img>
+                    </div><!-- Selfie Minions -->
+                    <div class="col-sm-12 col-md-4">
+                        <img src="./img/Artzy Minions.jpg" style="width:100%;"></img>
+                    </div><!-- Artzy Minions -->
+                    <div class="col-sm-12 col-md-4">
+                        <img src="./img/Streeless Minions.jpg" style="width:100%;"></img>
+                    </div><!-- Stressless Minion -->
+                    <div class="col-sm-12 col-md-4">
+                        <img src="./img/Bat Minion.jpg" style="width:100%;"></img>
+                    </div><!-- Bat Minion -->
+                    <div class="col-sm-12 col-md-4">
+                        <img src="./img/Smart Minion.jpg" style="width:100%;"></img>
+                    </div><!-- Smart Minion -->
+                    <div class="col-sm-12 col-md-4">
+                        <img src="./img/One in a Minion.jpg" style="width:100%;"></img>
+                    </div><!-- One in a Minion -->
+                    <div class="col-sm-12 col-md-4">
+                        <img src="./img/The Three Amionons.jpg" style="width:100%;"></img>
+                    </div><!-- The Three Amionons -->
+                </div><!-- feed -->
+            </div><!-- three-column -->
+        </div><!-- feeds container -->
+    </div><!-- main container -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>        
+</body>
+
+</html>
